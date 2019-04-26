@@ -34,13 +34,44 @@ namespace WordCounter
         }
         public string[] SplitSentence()
         {
-            // string[] temp = {""};
-            // return temp;
-            return _sentence.Split(' ');
+            //split the sentence into individual words and 
+            string[] splitSentence = _sentence.Split(' ');
+            string[] cleanedSentence = new string[splitSentence.Length];
+            int i=0;
+
+            foreach (string word in splitSentence)
+            {
+                string cleanedWord = RemoveSomePunctuation(word);
+                // System.Console.WriteLine("index "+ i + " word: " + "'" + cleanedWord + "'");
+                cleanedSentence[i] = cleanedWord;
+                i++;
+            }
+            return splitSentence;
         }
+        public string RemoveSomePunctuation(string wordToClean)
+        // Remove beginning or ending punctuation
+        // Since we can't use regular expressions, I cheat here in a different way by removing all punctuation except apostrophe
+        {
+            char[] splitWord = wordToClean.ToCharArray();
+            string cleanedWord = "";
+            foreach (char letter in splitWord)
+            {
+                if (("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'".Contains(letter)))
+                // if ("abcdefghijklmnopqrstuvwxyz'".Contains(letter))
+
+                {
+                    cleanedWord += letter.ToString();
+                }
+                else
+                {
+                    continue;
+                }
+            }
+            return cleanedWord;
+        }
+
         public bool CheckWord() 
         {
-            // Disregard most 
             string wordToTest = GetWord().ToLower();
             char[] charactersToTest = SplitWord();
             foreach (char letter in charactersToTest)
@@ -54,7 +85,6 @@ namespace WordCounter
                     return false;
                 }
             }
-
             return true;
         }
     }
