@@ -42,7 +42,7 @@ namespace WordCounter
             foreach (string word in splitSentence)
             {
                 string cleanedWord = RemoveSomePunctuation(word);
-                // System.Console.WriteLine("index "+ i + " word: " + "'" + cleanedWord + "'");
+                System.Console.WriteLine("index "+ i + " word: " + "'" + cleanedWord + "'");
                 cleanedSentence[i] = cleanedWord;
                 i++;
             }
@@ -56,9 +56,7 @@ namespace WordCounter
             string cleanedWord = "";
             foreach (char letter in splitWord)
             {
-                if (("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'".Contains(letter)))
-                // if ("abcdefghijklmnopqrstuvwxyz'".Contains(letter))
-
+                if ("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'".Contains(letter))
                 {
                     cleanedWord += letter.ToString();
                 }
@@ -69,23 +67,56 @@ namespace WordCounter
             }
             return cleanedWord;
         }
-
+        // If the word contains anything but alphabetical or apostrophe characters, reject it
         public bool CheckWord() 
         {
             string wordToTest = GetWord().ToLower();
-            char[] charactersToTest = SplitWord();
-            foreach (char letter in charactersToTest)
+            if (wordToTest == "")
             {
-                if ("abcdefghijklmnopqrstuvwxyz'".Contains(letter))
+                return false;
+            }
+            else
+            {
+                char[] charactersToTest = SplitWord();
+                foreach (char letter in charactersToTest)
                 {
-                    continue;
+                    if ("abcdefghijklmnopqrstuvwxyz'".Contains(letter))
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 }
-                else
+                return true;
+            }
+        }
+        public bool CompareWords(string wordToTest)
+        {
+            string word = GetWord();
+            if (word.ToLower() == wordToTest.ToLower())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public int CountWordOccurrences()
+        {
+            string word = GetWord();
+            string[] splitSentence = SplitSentence();
+            int counter = 0;
+            foreach (string wordToTest in splitSentence)
+            {
+                if (CompareWords(wordToTest))
                 {
-                    return false;
+                    counter++;
                 }
             }
-            return true;
+            return counter;
         }
     }
 }
