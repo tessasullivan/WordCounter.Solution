@@ -29,11 +29,12 @@ The program will take a word and a sentence from a user and output how frequentl
 ## Setup/Installation Requirements
 
 Currently does not include Program.cs so it cannot be run directly from the command line.  Tests can be run by doing the following:
-1. Install .Net 2.2 
+1. Clone this repository.
+2. Install .Net 2.2 
     * Go to https://dotnet.microsoft.com/download/dotnet-core/2.2 and download the appropriate installer for your OS.
-2. cd to repo directory
-3. On the command line, run:
-    * dotnet test LeetSpeak.Tests
+3. cd to repo directory
+4. On the command line, run:
+    * dotnet test WordCounter.Solution/WordCounter.Tests
 
 ## Known Issues
 * No known issues at this time.
