@@ -36,7 +36,7 @@ Currently does not include Program.cs so it cannot be run directly from the comm
     * dotnet test LeetSpeak.Tests
 
 ## Known Issues
-* Sentences with ending punctuation fail test SplitSentence_VerifySentencePunctuationIgnored_StringArray though they pass test CountWordOccurrences_VerifySingleOccurrenceWhenTwoWordsSameExceptApostrophe_1
+* No known issues at this time.
 
 ## Technologies Used
 
