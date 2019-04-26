@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 
 namespace WordCounter
 {
@@ -44,13 +43,8 @@ namespace WordCounter
             foreach (string word in splitSentence)
             {
                 string cleanedWord = RemoveSomePunctuation(word);
-                System.Console.WriteLine("SplitSentence index "+ i + " word: " + "'" + cleanedWord + "'");
                 cleanedSentence[i] = cleanedWord;
                 i++;
-            }
-            for (i=0; i < cleanedSentence.Length; i++)
-            {
-                System.Console.WriteLine("cleanedSentence[" + i + "] is '" + cleanedSentence[i] + "'");
             }
             return cleanedSentence;
         }
