@@ -226,7 +226,7 @@ namespace WordCounter.Tests
         public void CountWordOccurrences_VerifySingleOccurrenceWhenTwoWordsSameExceptApostrophe_1()
         {
             string word = "can't";
-            string sentence = "I can't believe you can cant";
+            string sentence = "I can't believe you can cant.";
             WordCounter newWordCounter = new WordCounter(word, sentence);
             Assert.AreEqual(1, newWordCounter.CountWordOccurrences());
         }
