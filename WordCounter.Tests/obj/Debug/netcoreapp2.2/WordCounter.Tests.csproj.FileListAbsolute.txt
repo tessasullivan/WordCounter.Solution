@@ -1,0 +1,17 @@
+/Users/tessa/Documents/Epicodus/02 C#/Week01/WordCounter.Solution/WordCounter.Tests/obj/Debug/netcoreapp2.2/WordCounter.Tests.csprojAssemblyReference.cache
+/Users/tessa/Documents/Epicodus/02 C#/Week01/WordCounter.Solution/WordCounter.Tests/obj/Debug/netcoreapp2.2/WordCounter.Tests.csproj.CoreCompileInputs.cache
+/Users/tessa/Documents/Epicodus/02 C#/Week01/WordCounter.Solution/WordCounter.Tests/obj/Debug/netcoreapp2.2/WordCounter.Tests.AssemblyInfoInputs.cache
+/Users/tessa/Documents/Epicodus/02 C#/Week01/WordCounter.Solution/WordCounter.Tests/obj/Debug/netcoreapp2.2/WordCounter.Tests.AssemblyInfo.cs
+/Users/tessa/Documents/Epicodus/02 C#/Week01/WordCounter.Solution/WordCounter.Tests/bin/Debug/netcoreapp2.2/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+/Users/tessa/Documents/Epicodus/02 C#/Week01/WordCounter.Solution/WordCounter.Tests/bin/Debug/netcoreapp2.2/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+/Users/tessa/Documents/Epicodus/02 C#/Week01/WordCounter.Solution/WordCounter.Tests/bin/Debug/netcoreapp2.2/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+/Users/tessa/Documents/Epicodus/02 C#/Week01/WordCounter.Solution/WordCounter.Tests/bin/Debug/netcoreapp2.2/WordCounter.Tests.deps.json
+/Users/tessa/Documents/Epicodus/02 C#/Week01/WordCounter.Solution/WordCounter.Tests/bin/Debug/netcoreapp2.2/WordCounter.Tests.runtimeconfig.json
+/Users/tessa/Documents/Epicodus/02 C#/Week01/WordCounter.Solution/WordCounter.Tests/bin/Debug/netcoreapp2.2/WordCounter.Tests.runtimeconfig.dev.json
+/Users/tessa/Documents/Epicodus/02 C#/Week01/WordCounter.Solution/WordCounter.Tests/bin/Debug/netcoreapp2.2/WordCounter.Tests.dll
+/Users/tessa/Documents/Epicodus/02 C#/Week01/WordCounter.Solution/WordCounter.Tests/bin/Debug/netcoreapp2.2/WordCounter.Tests.pdb
+/Users/tessa/Documents/Epicodus/02 C#/Week01/WordCounter.Solution/WordCounter.Tests/bin/Debug/netcoreapp2.2/WordCounter.dll
+/Users/tessa/Documents/Epicodus/02 C#/Week01/WordCounter.Solution/WordCounter.Tests/bin/Debug/netcoreapp2.2/WordCounter.pdb
+/Users/tessa/Documents/Epicodus/02 C#/Week01/WordCounter.Solution/WordCounter.Tests/obj/Debug/netcoreapp2.2/WordCounter.Tests.csproj.CopyComplete
+/Users/tessa/Documents/Epicodus/02 C#/Week01/WordCounter.Solution/WordCounter.Tests/obj/Debug/netcoreapp2.2/WordCounter.Tests.dll
+/Users/tessa/Documents/Epicodus/02 C#/Week01/WordCounter.Solution/WordCounter.Tests/obj/Debug/netcoreapp2.2/WordCounter.Tests.pdb
