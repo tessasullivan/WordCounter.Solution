@@ -28,5 +28,34 @@ namespace WordCounter
         {
             _sentence = newSentence;
         }
+        public char[] SplitWord()
+        {
+            return GetWord().ToCharArray();
+        }
+        public string[] SplitSentence()
+        {
+            // string[] temp = {""};
+            // return temp;
+            return _sentence.Split(' ');
+        }
+        public bool CheckWord() 
+        {
+            // Disregard most 
+            string wordToTest = GetWord().ToLower();
+            char[] charactersToTest = SplitWord();
+            foreach (char letter in charactersToTest)
+            {
+                if ("abcdefghijklmnopqrstuvwxyz'".Contains(letter))
+                {
+                    continue;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
     }
 }

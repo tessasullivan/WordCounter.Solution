@@ -47,5 +47,50 @@ namespace WordCounter.Tests
             newWordCounter.SetSentence(updatedSentence);
             Assert.AreEqual(updatedSentence, newWordCounter.GetSentence());
         }
+
+        [TestMethod]
+        public void SplitWord_SplitWord_CharArray()
+        {
+            string word = "joe";
+            // char[] expectedResult = word.ToCharArray();
+            char[] expectedResult = new char[] {'j','o','e'};
+            WordCounter newWordCounter = new WordCounter(word, "");
+            CollectionAssert.AreEqual(expectedResult, newWordCounter.SplitWord());
+        }
+
+        [TestMethod]
+        public void SplitSentence_SplitSentence_StringArray()
+        {
+            string sentence = "I am a sentence";
+            string[] expectedResult = sentence.Split(' ');
+            WordCounter newWordCounter = new WordCounter("", sentence);
+            CollectionAssert.AreEqual(expectedResult, newWordCounter.SplitSentence());
+        }
+
+        [TestMethod]
+        public void CheckWord_VerifyWordContainsAlphaNumericOnly_True()
+        {
+            string word = "test";
+            string sentence = "";
+            WordCounter newWordCounter = new WordCounter(word, sentence);
+            Assert.AreEqual(true, newWordCounter.CheckWord());
+        }
+        
+        [TestMethod]
+        public void CheckWord_VerifyWordContainsAlphaNumericOnly_False()
+        {
+            string word = "%";
+            string sentence = "";
+            WordCounter newWordCounter = new WordCounter(word, sentence);
+            Assert.AreEqual(false, newWordCounter.CheckWord());
+        }
+        [TestMethod]
+        public void CheckWord_VerifyWordContainsApostropheIsWord_True()
+        {
+            string word = "can't";
+            string sentence = "";
+            WordCounter newWordCounter = new WordCounter(word, sentence);
+            Assert.AreEqual(true, newWordCounter.CheckWord());
+        }
     }
 }

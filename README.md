@@ -21,6 +21,8 @@ The program will take a word and a sentence from a user and output how frequentl
 | Word occurs 1 time in sentence | Input: word: dog, sentence: I walked the dog this morning|Output: dog: 1 |
 | Word occurs 3 times in sentence | Input: coffee, sentence: I went to Starbucks coffee and got tea instead of coffee because I don't like coffee | Output: coffee: 3|
 | Case is ignored | Input: word: coffee, sentence: I went to Starbucks Coffee this morning | Output: coffee: 1|
+| Words which contain apostrophe are treated as words | Input: word: can't, sentence: I can't wait to see you | Output: can't: 1|
+| Words which contain an apostrophe are considered different from words without|Input: word: cant, sentence, I can't believe you can cant | Output: cant: 1 |
 
 
 
