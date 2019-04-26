@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
 using WordCounter;
 
 namespace WordCounter.Tests
@@ -95,29 +96,26 @@ namespace WordCounter.Tests
         {
             string word = "test";
             string sentence = "I am a sentence";
-            string[] expectedResult = sentence.Split(' ');
+            string[] expectedResult = {"I", "am", "a", "sentence"};
+
             WordCounter newWordCounter = new WordCounter(word, sentence);
             CollectionAssert.AreEqual(expectedResult, newWordCounter.SplitSentence());
         }
-        // This test currently fails but I cannot figure out why (since above test with 'test.' succeeds) so I'm commenting it out and plan to come back to it later.
-        // [TestMethod]
-        // public void SplitSentence_VerifySentencePunctuationIgnored_StringArray()
-        // {
-        //     string word = "";
-        //     // string sentence = "I am a sentence.";
-        //     // string[] expectedResult = {"I", "am", "a", "sentence"};
-        //     string sentence = "sentence.";
-        //     string[] expectedResult = {"sentence"};
-        //     foreach (string testWord in expectedResult)
-        //     {
-        //         System.Console.WriteLine("expectedResult "+ "'" + testWord + "'");
-        //     }
-        //     WordCounter newWordCounter = new WordCounter(word, sentence);
-        //     CollectionAssert.AreEqual(expectedResult, newWordCounter.SplitSentence());
-        // }
 
         [TestMethod]
-        public void CheckWord_VerifyWordContainsAlphaNumericOnly_True()
+        public void SplitSentence_VerifySentencePunctuationIgnored_StringArray()
+        {
+            string word = "test";
+            string sentence = "I am a sentence.";
+            string[] expectedResult = {"I", "am", "a", "sentence"};
+            WordCounter newWordCounter = new WordCounter(word, sentence);
+
+            string[] actualResult = newWordCounter.SplitSentence();
+            CollectionAssert.AreEqual(expectedResult, actualResult);
+        }
+
+        [TestMethod]
+        public void CheckWord_VerifyWordContainsAlphabetOnly_True()
         {
             string word = "test";
             string sentence = "";
@@ -135,7 +133,7 @@ namespace WordCounter.Tests
         }
 
         [TestMethod]
-        public void CheckWord_VerifyWordContainsAlphaNumericOnly_False()
+        public void CheckWord_VerifyWordContainsAlphabetOnly_False()
         {
             string word = "%";
             string sentence = "";

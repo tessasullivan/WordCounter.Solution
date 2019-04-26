@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace WordCounter
 {
@@ -32,9 +33,10 @@ namespace WordCounter
         {
             return GetWord().ToCharArray();
         }
+
         public string[] SplitSentence()
         {
-            //split the sentence into individual words and 
+            //split the sentence into individual words and remove punctuation except apostrophe
             string[] splitSentence = _sentence.Split(' ');
             string[] cleanedSentence = new string[splitSentence.Length];
             int i=0;
@@ -42,12 +44,17 @@ namespace WordCounter
             foreach (string word in splitSentence)
             {
                 string cleanedWord = RemoveSomePunctuation(word);
-                System.Console.WriteLine("index "+ i + " word: " + "'" + cleanedWord + "'");
+                System.Console.WriteLine("SplitSentence index "+ i + " word: " + "'" + cleanedWord + "'");
                 cleanedSentence[i] = cleanedWord;
                 i++;
             }
-            return splitSentence;
+            for (i=0; i < cleanedSentence.Length; i++)
+            {
+                System.Console.WriteLine("cleanedSentence[" + i + "] is '" + cleanedSentence[i] + "'");
+            }
+            return cleanedSentence;
         }
+
         public string RemoveSomePunctuation(string wordToClean)
         // Remove beginning or ending punctuation
         // Since we can't use regular expressions, I cheat here in a different way by removing all punctuation except apostrophe
