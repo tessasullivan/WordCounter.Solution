@@ -48,30 +48,43 @@ namespace WordCounter
             }
             return cleanedSentence;
         }
-
         public string RemoveSomePunctuation(string wordToClean)
-        // Remove beginning or ending punctuation
-        // Since we can't use regular expressions, I cheat here in a different way by removing all punctuation except apostrophe
         {
-            char[] splitWord = wordToClean.ToCharArray();
-            string cleanedWord = "";
-            foreach (char letter in splitWord)
+            // if the first character is not a letter, remove it and return the string, same with last character
+            if (! char.IsLetter(wordToClean[0]))
             {
-                if ("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'".Contains(letter))
-                {
-                    cleanedWord += letter.ToString();
-                }
-                else
-                {
-                    continue;
-                }
+                wordToClean = wordToClean.Remove(0,1);
             }
-            return cleanedWord;
+            else if (!char.IsLetter(wordToClean[wordToClean.Length-1]))
+            {
+                wordToClean = wordToClean.Remove(wordToClean.Length-1, 1);
+            }
+            return wordToClean;
         }
+
+        // public string RemoveSomePunctuation(string wordToClean)
+        // // Remove beginning or ending punctuation
+        // // Since we can't use regular expressions, I cheat here in a different way by removing all punctuation except apostrophe
+        // {
+        //     char[] splitWord = wordToClean.ToCharArray();
+        //     string cleanedWord = "";
+        //     foreach (char letter in splitWord)
+        //     {
+        //         if (char.IsLetter(letter) || letter == '\'')
+        //         {
+        //             cleanedWord += letter.ToString();
+        //         }
+        //         else
+        //         {
+        //             continue;
+        //         }
+        //     }
+        //     return cleanedWord;
+        // }
         // If the word contains anything but alphabetical or apostrophe characters, reject it
         public bool CheckWord() 
         {
-            string wordToTest = GetWord().ToLower();
+            string wordToTest = GetWord();
             if (wordToTest == "")
             {
                 return false;
@@ -81,7 +94,8 @@ namespace WordCounter
                 char[] charactersToTest = SplitWord();
                 foreach (char letter in charactersToTest)
                 {
-                    if ("abcdefghijklmnopqrstuvwxyz'".Contains(letter))
+                    if (char.IsLetter(letter) || letter == '\'')
+
                     {
                         continue;
                     }
