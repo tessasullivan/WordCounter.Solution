@@ -62,25 +62,6 @@ namespace WordCounter
             return wordToClean;
         }
 
-        // public string RemoveSomePunctuation(string wordToClean)
-        // // Remove beginning or ending punctuation
-        // // Since we can't use regular expressions, I cheat here in a different way by removing all punctuation except apostrophe
-        // {
-        //     char[] splitWord = wordToClean.ToCharArray();
-        //     string cleanedWord = "";
-        //     foreach (char letter in splitWord)
-        //     {
-        //         if (char.IsLetter(letter) || letter == '\'')
-        //         {
-        //             cleanedWord += letter.ToString();
-        //         }
-        //         else
-        //         {
-        //             continue;
-        //         }
-        //     }
-        //     return cleanedWord;
-        // }
         // If the word contains anything but alphabetical or apostrophe characters, reject it
         public bool CheckWord() 
         {
