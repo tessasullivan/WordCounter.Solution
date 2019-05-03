@@ -13,9 +13,10 @@ namespace WordCounter.Controllers
     public ActionResult New() { return View(); }
 
     [HttpPost("/WordCounter/show")]
-    public ActionResult Create(string word, string sentence)
+    public ActionResult Create(int total, string word, string sentence)
     {
-        WordCounter wordCounter = new WordCounter(word, sentence);
+        WordCounter wordCounter = new WordCounter(total, word, sentence);
+        wordCounter.CountWordOccurrences();
 
         return View("Show", wordCounter);
     }

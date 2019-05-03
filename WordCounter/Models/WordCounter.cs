@@ -4,14 +4,25 @@ namespace WordCounter
 {
     public class WordCounter
     {
+        private static int _total;
         private string _word;
         private string _sentence;
-        public WordCounter(string word, string sentence)
+
+        public WordCounter(int total, string word, string sentence)
         {
+            _total = total;
             _word = word;
             _sentence = sentence;
         }
 
+        public int GetTotal()
+        {
+            return _total;
+        }
+        public void SetTotal(int total)
+        {
+            _total = total;
+        }
         public string GetWord()
         {
             return _word;
@@ -100,9 +111,10 @@ namespace WordCounter
                 return false;
             }
         }
-        public int CountWordOccurrences()
+        public void CountWordOccurrences()
         {
             string word = GetWord();
+            WordCounter newWordCounter = new WordCounter(0, word, GetSentence());
             string[] splitSentence = SplitSentence();
             int counter = 0;
             foreach (string wordToTest in splitSentence)
@@ -112,7 +124,9 @@ namespace WordCounter
                     counter++;
                 }
             }
-            return counter;
+            System.Console.WriteLine("counter is " + counter);
+            newWordCounter.SetTotal(counter);
+            System.Console.WriteLine("GetTotal is " + newWordCounter.GetTotal());
         }
     }
 }
