@@ -1,7 +1,8 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
+using WordCounter;
 
-namespace ProjectName.Controllers
+namespace WordCounter.Controllers
 {
   public class HomeController : Controller
   {
