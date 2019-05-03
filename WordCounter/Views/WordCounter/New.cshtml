@@ -1,0 +1,15 @@
+@{
+  Layout = "_Layout";
+}
+
+<div class="container">
+  <h1>Word Counter Extravaganza</h1>
+  <form method="post" action="/wordcounter/show">
+    <label for='word'>Enter a word to search for</label>
+    <input name='word' id='word' type='text'><br/>
+    <label for='sentence'>Enter a sentence</label>
+    <input name='sentence' id='sentence' type='text'><br />
+    <button type='submit' class='btn btn-danger'>Count your words</button>
+  </form>
+  <a href="/">Back to start</a>
+</div>
