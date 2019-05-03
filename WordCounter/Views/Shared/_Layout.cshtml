@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="~/css/styles.css">
   </head>
   <body>
-    @RenderBody()
-    @Html.Partial("_Footer")
+      <div class="container">
+        <h1>Welcome to the Word Counter Extravaganza</h1>
+         @RenderBody()
+         @Html.Partial("_Footer")
+      </div>
   </body>
 </html>
