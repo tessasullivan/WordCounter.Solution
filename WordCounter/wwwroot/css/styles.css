@@ -1,9 +1,80 @@
+h1 {
+    color: #400080;
+    font-family: fantasy;
+    text-align: center;
+    margin-top: 15px;
+}
 div#footer {
+    text-align: center;
     position:fixed;
     bottom:0px;
     left:0px;
     width:100%;
     color:#CCC;
-    background:#333;
+    background: #400080;
     padding:8px;
 }
+
+div.slide-left {
+  width:100%;
+  overflow:hidden;
+  animation: slide-left 10s;
+}
+
+@keyframes slide-left {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+button {
+    background-color: #400080;
+
+    color: white;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 12px;
+    padding: 6px 18px;
+    font-family: fantasy;
+
+  }
+#btn1 {
+    top: 100px;
+    left: 450px;
+    position: relative;
+    width: 175px;
+    height: 100px;
+    font-size: 2em;
+}
+form {
+     margin: auto;
+    position: relative;
+    /* width: 550px;
+    height: 450px; */
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 24px;
+    font-weight: bold;
+    color: #09C;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #999;
+    border: inset 1px solid #333;
+    /* -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3); */
+  }
+  body {
+    background: -webkit-linear-gradient(bottom, #CCCCCC, #EEEEEE);
+    background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE);
+    background: linear-gradient(bottom, #CCCCCC, #EEEEEE);
+
+  }
