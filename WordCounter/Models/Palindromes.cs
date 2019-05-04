@@ -29,6 +29,14 @@ namespace Palindromes
         {
             return _id;
         }
+        public bool GetIsPalindrome()
+        {
+            return _isPalindrome;
+        }
+        public static void Clear()
+        {
+            _instances.Clear();
+        }
         public bool IsPalindromeTest()
         {
             string phrase = GetPhrase();
