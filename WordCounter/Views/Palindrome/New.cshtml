@@ -1,0 +1,12 @@
+@{
+  Layout = "_Layout";
+}
+
+  <form method="post" action="/wordcounter/show">
+    <label for='word'>Enter your word</label>
+    <input name='word' id='word' type='text' autofocus required>
+    <label for='sentence'>Enter a sentence</label>
+    <textarea name='sentence' id='sentence' type='text' required></textarea>
+      <a href="/" class='linkbutton'>Back to start</a>
+    <button type='submit'>Count your words</button>
+  </form>

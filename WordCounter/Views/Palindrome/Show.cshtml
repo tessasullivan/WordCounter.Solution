@@ -1,0 +1,11 @@
+@{
+  Layout = "_Layout";
+}
+<p>Your word <span class='standout'>@Model.GetWord()</span> was found 
+<span class='standout'>@Model.GetTotal()</span> times in 
+<span class='standout'>@Model.GetSentence()</span>.</p>
+
+  <form action='/WordCounter/new' method='post'>
+    <a href="/" class='linkbutton'>Back to start</a>
+      <button type='submit'>Play Again</button>
+  </form>
