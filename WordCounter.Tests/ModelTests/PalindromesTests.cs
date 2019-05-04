@@ -53,48 +53,54 @@ namespace Palindromes.Tests
         Assert.AreEqual(1, newPalindrome.GetId());
     }
     [TestMethod]
-    public void IsPalindromeTest_SingleChar_True()
+    public void GetIsPalindrome_SingleChar_True()
     {
     // any necessary logic to prep for test; instantiating new classes, etc
         string phrase="A";
         Palindrome testPalindrome = new Palindrome(phrase, false);
-        Assert.AreEqual(true, testPalindrome.IsPalindromeTest());
+        testPalindrome.IsPalindromeTest();
+        Assert.AreEqual(true, testPalindrome.GetIsPalindrome());
     }
 
     [TestMethod]
-    public void IsPalindromeTest_WordIsPalindromeTestEvenNumberOfChars_True()
+    public void GetIsPalindrome_WordGetIsPalindromeEvenNumberOfChars_True()
     {
         string phrase="noon";
         Palindrome testPalindrome = new Palindrome(phrase, false);
-        Assert.AreEqual(true, testPalindrome.IsPalindromeTest());
+        testPalindrome.IsPalindromeTest();
+        Assert.AreEqual(true, testPalindrome.GetIsPalindrome());
     }
     [TestMethod]
-    public void IsPalindromeTest_WordIsPalindromeTestOddNumberOfChars_True()
+    public void GetIsPalindrome_WordGetIsPalindromeOddNumberOfChars_True()
     {
         string phrase = "madam";
         Palindrome testPalindrome = new Palindrome(phrase, false);
-        Assert.AreEqual(true, testPalindrome.IsPalindromeTest());
+        testPalindrome.IsPalindromeTest();
+        Assert.AreEqual(true, testPalindrome.GetIsPalindrome());
     }
     [TestMethod]
-    public void IsPalindromeTest_NumberIsPalindromeTest_True()
+    public void GetIsPalindrome_NumberGetIsPalindrome_True()
     {
         string phrase = "4554";
         Palindrome testPalindrome = new Palindrome(phrase, false);
-        Assert.AreEqual(true, testPalindrome.IsPalindromeTest());
+        testPalindrome.IsPalindromeTest();
+        Assert.AreEqual(true, testPalindrome.GetIsPalindrome());
     }
     [TestMethod]
-    public void IsPalindromeTest_WordIsPalindromeTest_False()
+    public void GetIsPalindrome_WordGetIsPalindrome_False()
     {
         string phrase = "jump";
         Palindrome testPalindrome = new Palindrome(phrase, false);
-        Assert.AreEqual(false, testPalindrome.IsPalindromeTest());
+        testPalindrome.IsPalindromeTest();
+        Assert.AreEqual(false, testPalindrome.GetIsPalindrome());
     }
     // [TestMethod]
-    // public void IsPalindromeTest_PhraseIsPalindrome_True()
+    // public void GetIsPalindrome_PhraseIsPalindrome_True()
     // {
     //     string phrase = "a but tuba";
     //     Palindrome testPalindrome = new Palindrome(phrase, false);
-    //     Assert.AreEqual(true, testPalindrome.IsPalindromeTest());
+    //     testPalindrome.IsPalindromeTest();
+    //     Assert.AreEqual(true, testPalindrome.GetIsPalindrome());
     // }
   }
 }

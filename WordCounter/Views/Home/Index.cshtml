@@ -1,8 +1,12 @@
 @{
   Layout = "_Layout";
 }
-<div class="centered">
 
-<a href="/WordCounter" class='linkbutton'>Word Counter</a>
-<a href="/Palindrome" class='linkbutton'>Palindrome Tester</a>
-</div>
+<!-- <a href="/WordCounter/new" class='linkbutton'>Word Counter</a> -->
+<!-- <a href="/Palindrome/new" class='linkbutton'>Palindrome Tester</a> -->
+  <form action='/WordCounter/new' method='post'>
+      <button type='submit'>Word Counter</button>
+  </form>
+  <form action='/Palindrome/new' method='post'>
+    <button type='submit'>Test palindrome</button>
+  </form>

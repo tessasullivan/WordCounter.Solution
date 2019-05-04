@@ -33,16 +33,20 @@ namespace Palindromes
         {
             return _isPalindrome;
         }
+        public void SetIsPalindrome(bool isPalindrome)
+        {
+            _isPalindrome = isPalindrome;
+        }
         public static void Clear()
         {
             _instances.Clear();
         }
-        public bool IsPalindromeTest()
+        public void IsPalindromeTest()
         {
             string phrase = GetPhrase();
             if (phrase.Length == 1)
             {
-                return true;
+                SetIsPalindrome(true);
             }
             // Need to declare string variable here, even though we're doing a new string later
             string reversedPhraseStr;
@@ -52,11 +56,11 @@ namespace Palindromes
             bool test = phrase.Equals(reversedPhraseStr, StringComparison.OrdinalIgnoreCase);
             if (test) 
             {
-                return true;
+                SetIsPalindrome(true);
             }
             else
             {
-                return false;
+                SetIsPalindrome(false);
             }
         }
     }

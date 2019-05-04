@@ -16,13 +16,13 @@ namespace Palindromes.Tests
             ActionResult indexView = controller.Index ();
             Assert.IsInstanceOfType (indexView, typeof (ViewResult));
         }
-        // [TestMethod]
-        // public void New_ReturnsCorrectView_True () 
-        // {
-        //     PalindromesController controller = new PalindromesController ();
-        //     ActionResult indexView = controller.New ();
-        //     Assert.IsInstanceOfType (indexView, typeof (ViewResult));
-        // }
+        [TestMethod]
+        public void New_ReturnsCorrectView_True () 
+        {
+            PalindromeController controller = new PalindromeController ();
+            ActionResult indexView = controller.New ();
+            Assert.IsInstanceOfType (indexView, typeof (ViewResult));
+        }
         [TestMethod]
         public void Create_ReturnsCorrectView_True()
         {
@@ -32,16 +32,15 @@ namespace Palindromes.Tests
             ActionResult indexView = controller.Create (phrase, isPalindrome);
             Assert.IsInstanceOfType (indexView, typeof (ViewResult));
         }
-        // [TestMethod]
-        // public void Create_HasCorrectModelType_Palindromes()
-        // {
-        //     int total=0;
-        //     string word = "foo";
-        //     string sentence = "bar";
-        //     PalindromesController controller = new PalindromesController ();
-        //     ViewResult createView = controller.Create(total, word, sentence) as ViewResult;
-        //     var result = createView.ViewData.Model;
-        //     Assert.IsInstanceOfType(result, typeof(Palindromes));
-        // }      
+        [TestMethod]
+        public void Create_HasCorrectModelType_Palindromes()
+        {
+            string phrase = "";
+            bool isPalindrome = false;
+            PalindromeController controller = new PalindromeController ();
+            ViewResult createView = controller.Create(phrase, isPalindrome) as ViewResult;
+            var result = createView.ViewData.Model;
+            Assert.IsInstanceOfType(result, typeof(Palindrome));
+        }      
     }
 }
