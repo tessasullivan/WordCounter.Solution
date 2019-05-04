@@ -44,9 +44,11 @@ namespace Palindromes
         public void IsPalindromeTest()
         {
             string phrase = GetPhrase();
+
+            Palindrome newPalidrome = new Palindrome(phrase, false);
             if (phrase.Length == 1)
             {
-                SetIsPalindrome(true);
+                newPalidrome.SetIsPalindrome(true);
             }
             // Need to declare string variable here, even though we're doing a new string later
             string reversedPhraseStr;
@@ -56,11 +58,11 @@ namespace Palindromes
             bool test = phrase.Equals(reversedPhraseStr, StringComparison.OrdinalIgnoreCase);
             if (test) 
             {
-                SetIsPalindrome(true);
+                newPalidrome.SetIsPalindrome(true);
             }
             else
             {
-                SetIsPalindrome(false);
+                newPalidrome.SetIsPalindrome(false);
             }
         }
     }

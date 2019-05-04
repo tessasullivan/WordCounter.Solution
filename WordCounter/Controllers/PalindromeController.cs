@@ -16,7 +16,7 @@ namespace Palindromes.Controllers
     public ActionResult Create(string phrase, bool isPalindrome)
     {
         Palindrome testPalindrome = new Palindrome(phrase, isPalindrome);
-
+        testPalindrome.IsPalindromeTest();
         return View("Show", testPalindrome);
     }
   }
