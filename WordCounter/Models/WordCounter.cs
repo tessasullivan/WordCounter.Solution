@@ -124,9 +124,7 @@ namespace WordCounter
                     counter++;
                 }
             }
-            System.Console.WriteLine("counter is " + counter);
             newWordCounter.SetTotal(counter);
-            System.Console.WriteLine("GetTotal is " + newWordCounter.GetTotal());
         }
     }
 }

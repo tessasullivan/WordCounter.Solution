@@ -5,10 +5,10 @@
 <div class="container">
   <form method="post" action="/wordcounter/show">
     <label for='word'>Enter your word</label>
-    <input name='word' id='word' type='text'><br/>
+    <input name='word' id='word' type='text' autofocus required>
     <label for='sentence'>Enter a sentence</label>
-    <textarea name='sentence' id='sentence' type='text'></textarea><br />
+    <textarea name='sentence' id='sentence' type='text' required></textarea>
     <button type='submit'>Count your words</button>
   </form>
-  <a href="/">Back to start</a>
+  <a href="/" class='linkbutton'>Back to start</a>
 </div>
