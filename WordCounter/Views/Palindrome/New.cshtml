@@ -1,12 +1,10 @@
 @{
   Layout = "_Layout";
 }
-
-  <form method="post" action="/wordcounter/show">
+  <form method="post" action="/palindrome/show">
+  <h2>Palindrome Testing</h2>
     <label for='word'>Enter your word</label>
     <input name='word' id='word' type='text' autofocus required>
-    <label for='sentence'>Enter a sentence</label>
-    <textarea name='sentence' id='sentence' type='text' required></textarea>
       <a href="/" class='linkbutton'>Back to start</a>
-    <button type='submit'>Count your words</button>
+    <button type='submit'>Test palindrome</button>
   </form>

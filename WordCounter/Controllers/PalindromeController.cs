@@ -4,21 +4,20 @@ using Palindromes;
 
 namespace Palindromes.Controllers
 {
-  public class PalindromesController : Controller
+  public class PalindromeController : Controller
   {
-    [HttpGet("/Palindromes")]
+    [HttpGet("/Palindrome")]
     public ActionResult Index() { return View(); }
 
-    [HttpPost("/Palindromes/new")]
+    [HttpPost("/Palindrome/new")]
     public ActionResult New() { return View(); }
 
-    // [HttpPost("/Palindromes/show")]
-    // public ActionResult Create(int total, string word, string sentence)
-    // {
-    //     Palindromes Palindromes = new Palindromes(total, word, sentence);
-    //     Palindromes.CountWordOccurrences();
+    [HttpPost("/Palindrome/show")]
+    public ActionResult Create(string phrase, bool isPalindrome)
+    {
+        Palindrome testPalindrome = new Palindrome(phrase, isPalindrome);
 
-    //     return View("Show", Palindromes);
-    // }
+        return View("Show", testPalindrome);
+    }
   }
 }

@@ -1,11 +1,17 @@
 @{
   Layout = "_Layout";
 }
-<p>Your word <span class='standout'>@Model.GetWord()</span> was found 
-<span class='standout'>@Model.GetTotal()</span> times in 
-<span class='standout'>@Model.GetSentence()</span>.</p>
 
-  <form action='/WordCounter/new' method='post'>
+<h2>Palindrome Testing</h2>
+<p>Your word <span class='standout'>@Model.GetPhrase()</span> is
+
+@if (Model.GetIsPalindrome())
+{
+    <span class='standout'>not</span>
+}
+a palindrome. 
+
+  <form action='/Palindrome/new' method='post'>
     <a href="/" class='linkbutton'>Back to start</a>
       <button type='submit'>Play Again</button>
   </form>

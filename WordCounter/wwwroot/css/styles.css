@@ -1,6 +1,6 @@
 .centered {
     position: fixed;
-    top: 50%;
+    top: 25%;
     left: 50%;
     /* bring your own prefixes */
     transform: translate(-50%, -50%);
@@ -23,9 +23,15 @@ a:hover {
 }
 h1 {
     font-family: fantasy;
-    /* text-align: center; */
+    text-align: center;
     margin-top: 25px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
+}
+h2 {
+    margin-bottom: 20px;
+    color: darkblue;
+    font-size: 1.25em;
+    text-align: center;
 }
 div#footer {
     text-align: center;
