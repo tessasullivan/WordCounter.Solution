@@ -1,4 +1,17 @@
-a, h1, form {
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+html, body {
+    height: 100%;
+    background-image: -webkit-linear-gradient(bottom, #330099, orange);
+    background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE);
+    background: linear-gradient(bottom, #CCCCCC, #EEEEEE);
+}
+a, h1, form, .standout {
     color: #400080;
 }
 a:hover {
@@ -48,12 +61,14 @@ button, .linkbutton {
     text-align: center;
     display: inline-block;
     cursor: pointer;
+    margin-top: 5px;
 }
 button {
 
     border-radius: 12px;
     padding: 6px 18px;
     font-family: fantasy;
+    border:white 1px solid;
   }
 .linkbutton {
     width: 150px;
@@ -96,9 +111,7 @@ label {
     margin-top: 5px;
     margin-bottom: 0px;  
 }
-html, body {
-    height: 100%;
-    background-image: -webkit-linear-gradient(bottom, #330099, orange);
-    background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE);
-    background: linear-gradient(bottom, #CCCCCC, #EEEEEE);
-  }
+.standout {
+    font-family: fantasy;
+    font-weight: bold;
+}
